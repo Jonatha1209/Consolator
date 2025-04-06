@@ -1,0 +1,2 @@
+# Consolator
+calculator on console!

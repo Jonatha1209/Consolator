@@ -1,3 +1,4 @@
+
 from prompt_toolkit import PromptSession
 from prompt_toolkit.styles import Style
 from prompt_toolkit.history import FileHistory
@@ -29,7 +30,7 @@ mfuncs = {
 }
 
 sfuncs = {
-    name: getattr(sympy, name)
+    name: wrap_math_func(getattr(sympy, name))
     for name in dir(sympy)
     if isinstance(getattr(sympy, name), types.BuiltinFunctionType)
 }
